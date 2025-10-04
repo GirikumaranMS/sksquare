@@ -1,0 +1,320 @@
+/* --- 1. Global Reset & Typography --- */
+:root {
+    --primary-color: #007bff; /* A professional blue */
+    --secondary-color: #343a40; /* Dark text/background */
+    --light-bg: #f8f9fa; /* Light grey for sections */
+    --dark-bg: #212529; /* Dark grey for contact/footer */
+    --white: #ffffff;
+    --font-stack: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 1em;
+    font-size: 1.05rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* --- 2. Utility Classes --- */
+.section-padding {
+    padding: 80px 0;
+}
+
+.light-bg {
+    background-color: var(--light-bg);
+}
+
+.dark-bg {
+    background-color: var(--dark-bg);
+    color: var(--white);
+}
+
+.dark-bg h2 {
+    color: var(--white);
+}
+
+.center-text {
+    text-align: center;
+}
+
+.two-column-layout {
+    display: flex;
+    gap: 40px;
+}
+
+.content-block {
+    flex: 1;
+}
+
+/* --- 3. Header & Navigation --- */
+.main-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-box {
+    width: 25px;
+    height: 25px;
+    background-color: var(--primary-color);
+}
+
+.logo h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    font-weight: 500;
+    color: var(--secondary-color);
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* --- 4. Buttons (Call to Action) --- */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: translateY(-2px);
+}
+
+.large-btn {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+}
+
+/* --- 5. Hero Section --- */
+.hero-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('data-background.jpg'); /* You would add a background image here */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+    color: var(--secondary-color);
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* --- 6. Core Values Grid --- */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.value-item {
+    text-align: center;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.icon-blue {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.value-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* --- 7. Services & Why Choose Us Lists --- */
+.service-list, .why-choose-list {
+    list-style: none;
+    padding: 0;
+}
+
+.service-list li, .why-choose-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.service-list li:last-child, .why-choose-list li:last-child {
+    border-bottom: none;
+}
+
+.service-icon, .check-icon {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+    width: 25px;
+    text-align: center;
+}
+
+.why-choose-list {
+    margin-bottom: 30px;
+}
+
+/* --- 8. Contact Section --- */
+.contact-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-item {
+    text-align: center;
+    max-width: 300px;
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.dark-bg a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.dark-bg a:hover {
+    color: var(--primary-color);
+}
+
+/* --- 9. Footer --- */
+footer {
+    background-color: var(--dark-bg);
+    color: #adb5bd;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* --- 10. Responsiveness (Mobile Optimization) --- */
+@media (max-width: 768px) {
+    .nav-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .hero-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .two-column-layout {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-item p {
+        font-size: 1rem;
+    }
+}
