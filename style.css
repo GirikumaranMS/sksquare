@@ -127,18 +127,19 @@ a {
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* Increased gap */
+    gap: 20px; /* Increased gap */
+    color: #1a4a8c:
 }
 
 .main-nav a {
     font-weight: 500;
-    color: var(--white);
+    color:#1a4a8c;
     /* Removed transition from original style.css to match new structure */
     
 }
 
 .main-nav a:hover {
-    color: var(--primary-color);
+    color: #1a4a8c;
     border-bottom: 2px solid var(--primary-color); /* Underline hover effect */
 }
 
