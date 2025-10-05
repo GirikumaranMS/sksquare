@@ -145,6 +145,7 @@ a {
 
 .main-nav .primary-btn {
     border-bottom: none; /* Do not underline the button */
+    color: #ffffff;
 }
 
 /* --- 4. Buttons (Call to Action) --- */
