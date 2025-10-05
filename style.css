@@ -170,8 +170,8 @@ a {
 }
 
 .primary-btn:hover {
-    background-color: #143d75; /* Darker primary color */
-    transform: translateY(-1px);
+    background-color: var(--primary-color);
+    transform: translateY(1px);
     box-shadow: 0 4px 8px rgba(26, 74, 140, 0.4);
 }
 
