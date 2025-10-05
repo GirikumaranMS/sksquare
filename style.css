@@ -1,9 +1,10 @@
 /* --- 1. Global Reset & Typography --- */
 :root {
-    --primary-color: #007bff; /* A professional blue */
-    --secondary-color: #343a40; /* Dark text/background */
-    --light-bg: #f8f9fa; /* Light grey for sections */
-    --dark-bg: #212529; /* Dark grey for contact/footer */
+    /* Deeper, more sophisticated blue for a corporate look (Astra Group style) */
+    --primary-color: #1a4a8c; 
+    --secondary-color: #333333; /* Near-black for main text */
+    --light-bg: #f5f5f5; /* Very light grey for contrast */
+    --dark-bg: #222222; /* Deep dark grey/black for contact/footer */
     --white: #ffffff;
     --font-stack: 'Poppins', sans-serif;
 }
@@ -47,6 +48,7 @@ p {
 a {
     text-decoration: none;
     color: var(--primary-color);
+    transition: color 0.3s;
 }
 
 /* --- 2. Utility Classes --- */
@@ -80,10 +82,11 @@ a {
     flex: 1;
 }
 
-/* --- 3. Header & Navigation --- */
+/* --- 3. Header & Navigation (Clean, solid bar like Astra Group) --- */
 .main-header {
     background-color: var(--white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for lift */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -93,7 +96,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 18px 20px; /* Increased vertical padding for prominence */
 }
 
 .logo {
@@ -102,14 +105,14 @@ a {
     gap: 10px;
 }
 
-.logo-box {
-    width: 25px;
-    height: 25px;
-    background-color: var(--primary-color);
+/* STYLED FOR THE IMAGE LOGO */
+.logo-img {
+    height: 35px; /* Slightly larger logo */
+    width: auto;
 }
 
 .logo h1 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 700;
     color: var(--secondary-color);
     margin-bottom: 0;
@@ -118,98 +121,111 @@ a {
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 30px; /* Increased gap */
 }
 
 .main-nav a {
     font-weight: 500;
     color: var(--secondary-color);
-    transition: color 0.3s;
+    /* Removed transition from original style.css to match new structure */
+    padding-bottom: 3px;
 }
 
 .main-nav a:hover {
     color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color); /* Underline hover effect */
+}
+
+.main-nav .primary-btn {
+    border-bottom: none; /* Do not underline the button */
 }
 
 /* --- 4. Buttons (Call to Action) --- */
 .btn {
     display: inline-block;
     padding: 10px 25px;
-    border-radius: 5px;
+    border-radius: 4px;
     font-weight: 600;
     text-align: center;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    letter-spacing: 0.5px;
 }
 
 .primary-btn {
     background-color: var(--primary-color);
     color: var(--white);
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
+    /* Added a subtle shadow for a corporate button look */
+    box-shadow: 0 2px 5px rgba(26, 74, 140, 0.3); 
 }
 
 .primary-btn:hover {
-    background-color: #0056b3; /* Darker blue */
-    transform: translateY(-2px);
+    background-color: #143d75; /* Darker primary color */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(26, 74, 140, 0.4);
 }
 
 .large-btn {
-    padding: 15px 35px;
-    font-size: 1.1rem;
+    padding: 16px 38px;
+    font-size: 1.2rem;
 }
 
 /* --- 5. Hero Section --- */
 .hero-section {
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('data-background.jpg'); /* You would add a background image here */
-    background-size: cover;
-    background-position: center;
+    /* Using the deep primary color for a corporate hero element */
+    background: var(--light-bg); 
     text-align: center;
-    padding: 100px 20px;
-    border-bottom: 5px solid var(--primary-color);
+    padding: 120px 20px; /* More padding for impact */
+    border-bottom: 6px solid var(--primary-color);
 }
 
 .hero-text h2 {
-    font-size: 3rem;
-    margin-bottom: 0.5em;
+    font-size: 3.2rem;
+    margin-bottom: 0.6em;
     color: var(--secondary-color);
+    font-weight: 700;
 }
 
 .hero-text p {
-    font-size: 1.3rem;
-    max-width: 700px;
-    margin: 0 auto 30px;
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #555555;
 }
 
 /* --- 6. Core Values Grid --- */
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
     margin-top: 30px;
 }
 
 .value-item {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background: var(--white);
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
+    /* Clean white-space look with subtle borders/shadows */
+    border: 1px solid #e0e0e0; 
+    transition: transform 0.3s, border-color 0.3s;
 }
 
 .value-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    border-color: var(--primary-color);
 }
 
 .icon-blue {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--primary-color);
     margin-bottom: 15px;
 }
 
 .value-item h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
+    color: var(--primary-color);
 }
 
 /* --- 7. Services & Why Choose Us Lists --- */
@@ -219,9 +235,9 @@ a {
 }
 
 .service-list li, .why-choose-list li {
-    padding: 15px 0;
-    border-bottom: 1px solid #e9ecef;
-    font-size: 1.1rem;
+    padding: 18px 0;
+    border-bottom: 1px solid #dddddd;
+    font-size: 1.15rem;
     display: flex;
     align-items: center;
 }
@@ -231,10 +247,10 @@ a {
 }
 
 .service-icon, .check-icon {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--primary-color);
-    margin-right: 15px;
-    width: 25px;
+    margin-right: 20px;
+    width: 30px;
     text-align: center;
 }
 
@@ -247,8 +263,8 @@ a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 30px;
+    gap: 60px;
+    margin-top: 40px;
 }
 
 .contact-item {
@@ -257,26 +273,29 @@ a {
 }
 
 .contact-icon {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
+    font-size: 2.2rem;
+    /* Icons in the dark section can use a lighter accent or white */
+    color: var(--white); 
+    margin-bottom: 15px;
 }
 
 .dark-bg a {
     color: var(--white);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .dark-bg a:hover {
     color: var(--primary-color);
+    text-decoration: underline;
 }
 
 /* --- 9. Footer --- */
 footer {
     background-color: var(--dark-bg);
-    color: #adb5bd;
-    padding: 20px 0;
+    color: #999999;
+    padding: 25px 0;
     font-size: 0.9rem;
+    border-top: 5px solid var(--primary-color); /* Added a top line for definition */
 }
 
 /* --- 10. Responsiveness (Mobile Optimization) --- */
@@ -293,11 +312,11 @@ footer {
     }
 
     .logo {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
     .hero-text h2 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .two-column-layout {
@@ -306,12 +325,12 @@ footer {
     }
 
     .section-padding {
-        padding: 60px 0;
+        padding: 50px 0;
     }
 
     .contact-details {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
     }
 
     .contact-item p {
