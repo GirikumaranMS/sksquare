@@ -7,6 +7,12 @@
     --dark-bg: #222222; /* Deep dark grey/black for contact/footer */
     --white: #ffffff;
     --font-stack: 'Poppins', sans-serif;
+     --footer-bg:#0f1724;     /* deep navy */
+    --text:#e6eef8;         /* pale text */
+    --muted:#9fb3c9;
+    --accent:#6ee7b7;
+    --gap:10px;
+    --max-width:1100px;
 }
 
 * {
@@ -261,81 +267,82 @@ a {
 }
 
 /* --- 8. Contact Section --- */
-.contact-details {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 60px;
-    margin-top: 40px;
+  .site-footer{
+    background:linear-gradient(180deg, var(--footer-bg), #071028 120%);
+    color:var(--text);
+    padding:28px 18px;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  }
+
+  .footer-inner{
+    max-width:var(--max-width);
+    margin:0 auto;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:24px;
+  }
+
+  .footer-left{
+    flex:1;
+    text-align:left; /* ensures left-corner alignment */
+  }
+
+  .footer-title{
+    margin:0 0 10px 0;
+    font-size:1.05rem;
+    letter-spacing:0.2px;
+    color:var(--text);
+  }
+
+  .contact-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+  }
+
+  .contact-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:10px;
+    font-size:0.95rem;
+    color: #ffffff; /* always white */
+    }
+
+  .contact-item:last-child{ margin-bottom:0; }
+
+  .icon{
+    width:18px;
+    height:18px;
+    flex:0 0 18px;
+    fill:var(--accent);
+    opacity:0.95;
+  }
+
+  .contact-text{ display:inline-block; vertical-align:middle; }
+
+  .contact-link{
+  color: #ffffff; /* stay white on hover/focus */
+  text-decoration: underline; /* optional highlight */
+  outline: none;
+  }
+  .contact-link:hover,
+  .contact-link:focus{  color: #ffffff; /* stay white on hover/focus */
+  text-decoration: underline; /* optional highlight */
+  outline: none;
 }
 
-.contact-item {
-    text-align: center;
-    max-width: 300px;
-}
+  .footer-right{
+    flex:0 0 auto;
+    align-self:center;
+    color: #ffffff;;
+    font-size:0.85rem;
+  }
 
-.contact-icon {
-    font-size: 2.2rem;
-    /* Icons in the dark section can use a lighter accent or white */
-    color: var(--white); 
-    margin-bottom: 15px;
-}
-
-.dark-bg a {
-    color: var(--white);
-    text-decoration: none;
-}
-
-.dark-bg a:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
-}
-
-/* --- 9. Footer --- */
-footer {
-    background-color: var(--dark-bg);
-    color: #999999;
-    padding: 25px 0;
-    font-size: 0.9rem;
-    border-top: 5px solid var(--primary-color); /* Added a top line for definition */
-}
-
-/* --- 10. Responsiveness (Mobile Optimization) --- */
-@media (max-width: 768px) {
-    .nav-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .main-nav ul {
-        flex-direction: column;
-        gap: 10px;
-        padding-top: 10px;
-    }
-
-    .logo {
-        margin-bottom: 15px;
-    }
-
-    .hero-text h2 {
-        font-size: 2.5rem;
-    }
-
-    .two-column-layout {
-        flex-direction: column;
-        gap: 60px;
-    }
-
-    .section-padding {
-        padding: 50px 0;
-    }
-
-    .contact-details {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .contact-item p {
-        font-size: 1rem;
-    }
+  /* Responsive: stack on small screens but keep items left-aligned */
+  @media (max-width:640px){
+    .footer-inner{ flex-direction:column; align-items:flex-start; gap:18px; }
+    .footer-right{ align-self:flex-start; }
+  }
 }
