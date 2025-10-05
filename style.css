@@ -148,6 +148,8 @@ a {
     font-weight: 600;
     text-align: center;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    background-color: var(--primary-color);
+    color: var(--white);
     letter-spacing: 0.5px;
 }
 
