@@ -126,9 +126,9 @@ a {
 
 .main-nav a {
     font-weight: 500;
-    color: var(--secondary-color);
+    color: var(--white);
     /* Removed transition from original style.css to match new structure */
-    padding-bottom: 3px;
+    
 }
 
 .main-nav a:hover {
