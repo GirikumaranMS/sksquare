@@ -133,6 +133,7 @@ a {
 .main-nav a {
     font-weight: 600;
     color: var(--primary-color);
+    align-self: center;
     /* Removed transition from original style.css to match new structure */
     
 }
@@ -318,10 +319,14 @@ a {
   opacity: 0.95;
 }
 .contact-link {
-  color: --white;
+  color:var(--white);
   text-decoration: underline;
 }
-.contact-link:hover { color: var(--white); text-decoration: underline; }
+.contact-link:hover { 
+    color:var(--white) ;
+    text-decoration: underline;
+}
+
 .footer-right {
   align-self: center;
   color: --white;
