@@ -127,25 +127,23 @@ a {
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 20px; /* Increased gap */
-    color: #1a4a8c:
+    gap: 30px; /* Increased gap */
 }
 
 .main-nav a {
     font-weight: 500;
-    color:#1a4a8c;
+    color: var(--white);
     /* Removed transition from original style.css to match new structure */
     
 }
 
 .main-nav a:hover {
-    color: #1a4a8c;
+    color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color); /* Underline hover effect */
 }
 
 .main-nav .primary-btn {
     border-bottom: none; /* Do not underline the button */
-    color: #ffffff;
 }
 
 /* --- 4. Buttons (Call to Action) --- */
@@ -171,7 +169,7 @@ a {
 
 .primary-btn:hover {
     background-color: #143d75; /* Darker primary color */
-    transform: translateY(1px);
+    transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(26, 74, 140, 0.4);
 }
 
