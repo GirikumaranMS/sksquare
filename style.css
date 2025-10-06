@@ -1,16 +1,15 @@
 /* --- 1. Global Reset & Typography --- */
 :root {
     /* Deeper, more sophisticated blue for a corporate look (Astra Group style) */
-    --primary-color: #1a4a8c; 
-    --secondary-color: #333333; /* Near-black for main text */
+    --primary-color: #6d5192; 
+    --secondary-color: #302342; /* Near-black for main text */
     --light-bg: #f5f5f5; /* Very light grey for contrast */
     --dark-bg: #222222; /* Deep dark grey/black for contact/footer */
     --white: #ffffff;
     --font-stack: 'Poppins', sans-serif;
-     --footer-bg:#0f1724;     /* deep navy */
-    --text:#e6eef8;         /* pale text */
-    --muted:#9fb3c9;
-    --accent:#6ee7b7;
+    --footer-bg:#6d5192;     /* deep navy */
+    --text:#ffffff;         /* pale text */
+    --muted:#ffffff;
     --gap:10px;
     --max-width:1100px;
 }
@@ -120,31 +119,45 @@ a {
 .logo h1 {
     font-size: 1.7rem;
     font-weight: 700;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 0;
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* Increased gap */
+    gap: 25px; /* Increased gap */
+    
 }
 
 .main-nav a {
-    font-weight: 500;
-    color: var(--white);
+    font-weight: 600;
+    color: var(--primary-color);
     /* Removed transition from original style.css to match new structure */
     
 }
 
 .main-nav a:hover {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color); /* Underline hover effect */
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color); /* Underline hover effect */
 }
 
+
+
 .main-nav .primary-btn {
-    border-bottom: none; /* Do not underline the button */
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 1px solid var(--primary-color);
+    /* Added a subtle shadow for a corporate button look */
+    box-shadow: 0 2px 5px rgba(26, 74, 140, 0.3); 
 }
+
+.main-nav .primary-btn:hover {
+    background-color: var(--secondary-color); /* Darker primary color */
+    color: var(--white);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(26, 74, 140, 0.4);
+}  
 
 /* --- 4. Buttons (Call to Action) --- */
 .btn {
@@ -168,7 +181,7 @@ a {
 }
 
 .primary-btn:hover {
-    background-color: #143d75; /* Darker primary color */
+    background-color: var(--secondary-color); /* Darker primary color */
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(26, 74, 140, 0.4);
 }
@@ -268,7 +281,7 @@ a {
 
 /* === Footer === */
 .site-footer {
-  background: linear-gradient(180deg, var(--footer-bg), #071028 120%);
+  background: var(--secondary-color);
   color: var(--text);
   padding: 40px 20px;
   font-family: system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
@@ -288,6 +301,7 @@ a {
   color: var(--text);
   font-weight: 600;
 }
+
 .contact-list { list-style: none; padding: 0; margin: 0; }
 .contact-item {
   display: flex;
@@ -295,7 +309,7 @@ a {
   gap: 12px;
   margin-bottom: 10px;
   font-size: 0.95rem;
-  color: #ffffff;
+  color:var(--white);
 }
 .icon {
   width: 18px;
@@ -307,7 +321,7 @@ a {
   color: #ffffff;
   text-decoration: underline;
 }
-.contact-link:hover { color: #ffffff; text-decoration: underline; }
+.contact-link:hover { color: var(--secondary-color); text-decoration: underline; }
 .footer-right {
   align-self: center;
   color: #ffffff;
@@ -317,4 +331,4 @@ a {
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 18px; }
   .footer-right { align-self: flex-start; }
 }
-}
+

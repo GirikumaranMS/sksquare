@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
- 
 </head>
 <body>
-
     <header class="main-header">
         <div class="container nav-content">
             <div class="logo">
@@ -28,17 +26,15 @@
             </nav>
         </div>
     </header>
-
     <section class="hero-section">
         <div class="container">
             <div class="hero-text">
                 <h2>Secure and Efficient Document Digitization & Data Solutions</h2> 
                 <p>Delivering precision, reliability, and efficiency in data entry and document management to transform your business.</p>
-                <a href="#services" class="btn primary-btn large-btn">Explore Our Services</a>
+                <a href="#services" >Explore Our Services</a>
             </div>
         </div>
     </section>
-
     <section id="about" class="section-padding">
         <div class="container two-column-layout">
             <div class="content-block">
@@ -56,7 +52,6 @@
             </div>
         </div>
     </section>
-    
     <section class="section-padding light-bg">
         <div class="container">
             <h2 class="center-text">Our Core Values</h2>
@@ -89,7 +84,6 @@
             </div>
         </div>
     </section>
-
     <section id="services" class="section-padding">
         <div class="container two-column-layout">
             <div class="content-block">
@@ -112,7 +106,6 @@
             </div>
         </div>
     </section>
-    
     <section id="resources" class="section-padding light-bg">
         <div class="container center-text">
             <h2>Resources & Insights</h2>
@@ -120,42 +113,29 @@
             <a href="#" class="btn primary-btn">Read Our Blog</a>
         </div>
     </section>
-    <footer id="site-footer" class="btn primary-btn" role="contentinfo">
-  <div class="footer-inner">
-    <div class="footer-left">
-      <h3 class="footer-title">Contact Us</h3>
-      <ul class="contact-list" aria-label="Contact information">
-        <li class="contact-item">
-          <!-- simple inline svg icon for location -->
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
-          </svg>
-          <span class="contact-text">Minnampalli, Salem, India</span>
-        </li>
-        <li class="contact-item">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 2L2 7v6c0 5 5 9 10 9s10-4 10-9V7l-10-5zM12 11.5 4.5 7.5 12 3.5 19.5 7.5 12 11.5z"/>
-          </svg>
-        	<a href="http://sksquaregroup.in" target="_blank">sksquaregroup.in</a>
-        </li>
-        <li class="contact-item">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
-          </svg>
-          <a href="mailto:sksquaregroup@sksquaregroup.in">sksquaregroup@sksquaregroup.in</a>
-
-        </li>
-      </ul>
-    </div>
-
-    <!-- optional right area (copyright / social) -->
-    <div class="footer-right" aria-hidden="false">
-      <small>© <span id="year"></span> S K Square. All rights reserved.</small>
-    </div>   <script>
-  // set current year automatically
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-  </div>
-</footer>
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <h3 class="footer-title">Contact Us</h3>
+                <ul class="contact-list">
+                <li class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                    <span class="contact-text">Minnampalli, Salem, India</span>
+                </li>
+                <li class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2L2 7v6c0 5 5 9 10 9s10-4 10-9V7l-10-5zM12 11.5 4.5 7.5 12 3.5 19.5 7.5 12 11.5z"/></svg>
+                    <a href="http://sksquaregroup.in" target="_blank" class="contact-link">sksquaregroup.in</a>
+                </li>
+                <li class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+                    <a href="mailto:sksquaregroup@sksquaregroup.in" class="contact-link">sksquaregroup@sksquaregroup.in</a>
+                </li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <small>© <span id="year"></span> S K Square Group. All Rights Reserved.</small>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
