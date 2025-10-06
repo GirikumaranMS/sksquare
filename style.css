@@ -318,13 +318,13 @@ a {
   opacity: 0.95;
 }
 .contact-link {
-  color: #ffffff;
+  color: --white;
   text-decoration: underline;
 }
-.contact-link:hover { color: var(--secondary-color); text-decoration: underline; }
+.contact-link:hover { color: var(--white); text-decoration: underline; }
 .footer-right {
   align-self: center;
-  color: #ffffff;
+  color: --white;
   font-size: 0.85rem;
 }
 @media (max-width: 640px) {
