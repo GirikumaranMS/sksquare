@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Email Service - SK Square Group</title>
+    <link rel="icon" href="SKS.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .container {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+        }
+
+        @media (max-width: 320px) {
+            .container {
+                padding: 12px;
+            }
+            body {
+                padding: 10px;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            padding: 0 10px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        button {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #ffffff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            text-align: center;
+            width: 100%;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:active {
+            transform: scale(0.98);
+            background-color: #f5f5f5;
+        }
+
+        @media (hover: hover) {
+            button:hover {
+                background-color: #f8f9fa;
+                border-color: #d0d0d0;
+            }
+        }
+
+        @media (max-width: 360px) {
+            button {
+                padding: 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Email Service</h1>
+        <div class="button-group" id="email-buttons"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get URL parameters
+            const params = new URLSearchParams(window.location.search);
+            const emailBody = params.get('body');
+            const subject = params.get('subject');
+            const to = 'sksquaregroup@sksquaregroup.in';
+
+            // Email service URLs
+            const emailServices = {
+                gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`,
+                zoho: `https://mail.zoho.com/zm/#mail/compose?to=${to}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`,
+                outlook: `https://outlook.live.com/owa/?path=/mail/action/compose&to=${to}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`,
+                yahoo: `https://compose.mail.yahoo.com/?to=${to}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`
+            };
+
+            const buttonGroup = document.getElementById('email-buttons');
+            
+            // Create buttons for each email service
+            [
+                { name: 'Gmail', url: emailServices.gmail },
+                { name: 'Zoho Mail', url: emailServices.zoho },
+                { name: 'Outlook', url: emailServices.outlook },
+                { name: 'Yahoo Mail', url: emailServices.yahoo },
+                { name: 'Default Email Client', url: `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}` }
+            ].forEach(service => {
+                const button = document.createElement('button');
+                button.textContent = service.name;
+                button.onclick = () => window.location.href = service.url;
+                buttonGroup.appendChild(button);
+            });
+        });
+    </script>
+</body>
+</html>
